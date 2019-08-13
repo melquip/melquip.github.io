@@ -314,7 +314,7 @@
 
 			});
 
-/* stretch */
+		/* stretch - image zoom in / out */
 			$('#work .image.main').on('click', function() {
 				let $img = $(this).find('img');
 				let isOpening = !$img.hasClass('show');
@@ -323,7 +323,7 @@
 					scrollTop: $img.offset().top - (isOpening ? 0 : 80)
 				}, 500, 'swing');
 			});
-/* end stretch */
+		/* end stretch */
 
 			$window.on('keyup', function(event) {
 
