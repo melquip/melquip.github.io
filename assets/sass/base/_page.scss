@@ -1,0 +1,62 @@
+///
+/// Dimension by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Basic */
+
+	// MSIE: Required for IEMobile.
+		@-ms-viewport {
+			width: device-width;
+		}
+
+	// Ensures page width is always >=320px.
+		@include breakpoint('<=xsmall') {
+			html, body {
+				min-width: 320px;
+			}
+		}
+
+	// Set box model to border-box.
+	// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+		html {
+			box-sizing: border-box;
+		}
+
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+	body {
+		background: _palette(bg);
+
+		// Stops initial animations until page loads.
+			&.is-preload {
+				*, *:before, *:after {
+					@include vendor('animation', 'none !important');
+					@include vendor('transition', 'none !important');
+				}
+			}
+
+	}
+	
+	#work {
+		.image.main {
+			img {
+				cursor: pointer;
+				cursor: zoom-in;
+				object-fit: cover;
+				object-position: top center;
+				max-height: 360px;
+				@include vendor('transition', 'max-height .8s cubic-bezier(0, 1, 0, 1) -.1s');
+
+				&.show {
+					cursor: pointer;
+					cursor: zoom-out;
+					max-height: 9999px;
+					@include vendor('transition', 'max-height .8s cubic-bezier(0.5, 0, 1, 0)');
+				}
+			}
+		}
+	}
