@@ -1664,3 +1664,14 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+
+#work .image.main img {
+	max-height: 360px;
+	object-fit: cover;
+	object-position: top center;
+}
+/* 
+#work .image.main:hover img {
+	max-height: none;
+} */
