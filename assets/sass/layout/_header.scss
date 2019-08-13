@@ -79,6 +79,9 @@
 				max-height: 40rem;
 				overflow: hidden;
 
+				> p:first-child {
+					margin-bottom: 1rem;
+				}
 				> :last-child {
 					margin-bottom: 0;
 				}

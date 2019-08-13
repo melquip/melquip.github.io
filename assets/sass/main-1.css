@@ -1189,6 +1189,9 @@ body.is-preload #bg:before {
   max-height: 40rem;
   overflow: hidden;
 }
+#header .content .inner > p:first-child {
+  margin-bottom: 1rem;
+}
 #header .content .inner > :last-child {
   margin-bottom: 0;
 }
