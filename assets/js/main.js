@@ -314,6 +314,18 @@
 
 			});
 
+/* stretch */
+			$('#work .image.main').on('click', function() {
+				let $img = $(this).find('img');
+				let isOpening = !$img.hasClass('show');
+				$img.toggleClass('show');
+				$('html, body').stop().animate({
+					scrollTop: $img.offset().top - (isOpening ? 0 : 80)
+				}, 500, 'swing');
+				console.log($img.offset().top);
+			});
+/* end stretch */
+
 			$window.on('keyup', function(event) {
 
 				switch (event.keyCode) {
