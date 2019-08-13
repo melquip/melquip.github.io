@@ -322,7 +322,6 @@
 				$('html, body').stop().animate({
 					scrollTop: $img.offset().top - (isOpening ? 0 : 80)
 				}, 500, 'swing');
-				console.log($img.offset().top);
 			});
 /* end stretch */
 
